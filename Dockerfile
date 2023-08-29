@@ -61,7 +61,7 @@ RUN apt-get install -y libgstreamer1.0-0 \
     gstreamer1.0-nice
 
 WORKDIR /app
-COPY --from=builder /app/target/release/srt-whep ./srt-whep
+COPY --from=builder /app/target/release/srt-rtmp ./srt-rtmp
 
 ENV GST_DEBUG=1
-ENTRYPOINT [ "./srt-whep" ]
+ENTRYPOINT [ "./srt-rtmp" ]
