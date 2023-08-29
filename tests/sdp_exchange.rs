@@ -1,9 +1,9 @@
 use actix_web::http::StatusCode;
 use once_cell::sync::Lazy;
-use srt_whep::domain::{SharableAppState, VALID_WHEP_ANSWER, VALID_WHIP_OFFER};
-use srt_whep::startup::run;
-use srt_whep::stream::{Args, DumpPipeline, SRTMode};
-use srt_whep::telemetry::{get_subscriber, init_subscriber};
+use srt_rtmp::domain::{SharableAppState, VALID_WHEP_ANSWER, VALID_WHIP_OFFER};
+use srt_rtmp::startup::run;
+use srt_rtmp::stream::{Args, DumpPipeline, SRTMode};
+use srt_rtmp::telemetry::{get_subscriber, init_subscriber};
 use std::net::TcpListener;
 
 // Ensure that the `tracing` stack is only initialised once using `once_cell`

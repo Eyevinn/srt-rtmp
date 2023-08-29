@@ -1,7 +1,7 @@
+mod args;
+mod errors;
 mod gst_pipeline;
-mod pipeline;
-mod utils;
 
+pub use args::*;
+pub use errors::*;
 pub use gst_pipeline::*;
-pub use pipeline::*;
-pub use utils::*;

@@ -1,5 +1,4 @@
-use crate::domain::SharableAppState;
-use crate::stream::{Args, PipelineBase, SharablePipeline};
+use crate::stream::{Args, SharablePipeline};
 use std::error::Error;
 use tokio_async_drop::tokio_async_drop;
 
@@ -7,16 +6,11 @@ use tokio_async_drop::tokio_async_drop;
 pub struct PipelineGuard {
     pipeline: SharablePipeline,
     args: Args,
-    state: SharableAppState,
 }
 
 impl PipelineGuard {
-    pub fn new(pipeline: SharablePipeline, args: Args, state: SharableAppState) -> Self {
-        Self {
-            pipeline,
-            args,
-            state,
-        }
+    pub fn new(pipeline: SharablePipeline, args: Args) -> Self {
+        Self { pipeline, args }
     }
 
     /// Run a pipeline until it encounters EOS or an error. Clean up the pipeline after it finishes.
@@ -33,9 +27,6 @@ impl PipelineGuard {
     async fn cleanup(&self) -> Result<(), Box<dyn Error>> {
         // Clean up the pipeline when it finishes so it can be rerun
         self.pipeline.clean_up().await?;
-
-        // Reset app state
-        self.state.reset().await?;
 
         Ok(())
     }
