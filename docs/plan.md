@@ -1,0 +1,15 @@
+## Plans
+- [x] Understand WHEP endpoint for WebRTC based streaming.
+- [x] Check available tools for SRT to WebRTC
+- [x] Build a prototype server for WHEP
+- [x] Build the HTTP server in Rust
+- [x] Add support for audio
+- [x] Check the format/codec of the SRT stream
+- [x] Write the pipeline in Rust
+- [x] Add optional pass-through to another SRT receiver
+- [x] Test with browser
+- [x] Add support for graceful shutdown
+- [x] Add support for multiple WebRTC clients
+- [x] Add support for different SRT stream modes (caller/listener)
+- [x] Add support for different browsers
+- [x] Add support for cloud deployment (Docker for Ubuntu, MacOS)
