@@ -20,7 +20,7 @@ name = "srt-rtmp"
 [dependencies]
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 serde = "1.0.193"
-config = { version = "0.13", default-features = false, features = ["yaml"] }
+config = { version = "0.14", default-features = false, features = ["yaml"] }
 uuid = { version = "1", features = ["v4"] }
 chrono = { version = "0.4.42", default-features = false, features = ["clock"] }
 reqwest = { version = "0.11", default-features = false, features = ["json", "rustls-tls"] }
