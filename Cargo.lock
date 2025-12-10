@@ -782,9 +782,9 @@ dependencies = [
 
 [[package]]
 name = "gstreamer-pbutils"
-version = "0.21.0"
+version = "0.21.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a1e5eabfea8ac22256724f6093927dfd2148018175239036d4721e1dfc59c7d7"
+checksum = "4b2719d7831b815a6ac4ccca9324fa40dd0c4d3539a59531c2e7c8d44919b945"
 dependencies = [
  "glib",
  "gstreamer",
