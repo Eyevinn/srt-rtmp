@@ -34,7 +34,7 @@ serde-aux = "4"
 unicode-segmentation = "1.12.0"
 anyhow = "1.0.100"
 validator = "0.16"
-secrecy = { version = "0.8", features = ["serde"] }
+secrecy = { version = "0.10", features = ["serde"] }
 futures = "0.3.28"
 glib = "0.18.1"
 gstreamer = "0.21.0"
