@@ -36,7 +36,7 @@ anyhow = "1.0.40"
 validator = "0.16"
 secrecy = { version = "0.8", features = ["serde"] }
 futures = "0.3.28"
-glib = "0.18.1"
+glib = "0.18.5"
 gstreamer = "0.21.0"
 gstreamer-pbutils = "0.21.0"
 clap = { version = "4.3.0", features = ["derive"] }
